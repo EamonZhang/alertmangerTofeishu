@@ -151,7 +151,7 @@ inhibit_rules:
 - 故障时间
 - 恢复时间（如果是恢复消息）
 
-## 效果展示![alt text](image.png)
+## 效果展示
 
 <img width="660" height="640" alt="飞书告警消息效果图" src="./image.png" />
 
