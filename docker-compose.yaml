@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  alertmanager-feishu-webhook:
+    image: alertmanager-feishu-webhook:latest
+    ports:
+      - "9527:9527"
+    environment:
+      - FEISHU_WEBHOOK=https://open.feishu.cn/open-apis/bot/v2/hook/your-webhook-url
+      - FEISHU_SECRET=your-feishu-secret
+      - RUN_ENVIRONMENT=开发环境
+      - LOG_LEVEL=INFO
+      - PORT=9527
+    restart: unless-stopped
+    networks:
+      - monitoring
+
+networks:
+  monitoring:
+    driver: bridge
